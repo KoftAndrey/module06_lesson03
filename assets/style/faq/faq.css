@@ -164,8 +164,8 @@
   .faq__item:not(:last-child) {
     margin: 0 0 16px 0;
   }
-  
-  .faq__item:nth-child(2n) {
+
+  .faq__head_purple {
     background-color: #fff;
     color: #1C1A1A;
   }
