@@ -1,0 +1,25 @@
+@import url('normalize/normalize.css');
+
+@import url('vars/vars.css');
+
+@import url('global/global.css');
+
+@import url('header/header.css');
+
+@import url('cover/cover.css');
+
+@import url('rest/rest.css');
+
+@import url('halls/halls.css');
+
+@import url('book/book.css');
+
+@import url('about/about.css');
+
+@import url('reviews/reviews.css');
+
+@import url('faq/faq.css');
+
+@import url('contacts/contacts.css');
+
+@import url('modal/modal.css');

@@ -1,0 +1,162 @@
+/*Шрифты*/
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial'), url('../../fonts/Arial/Arial.woff2') format('woff2'),
+    url('../../fonts/Arial/Arial.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../../fonts/Arial/Arial-Bold.woff2') format('woff2'),
+    url('../../fonts/Arial/Arial-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../../fonts/Arial/Arial-Black.woff2') format('woff2'),
+    url('../../fonts/Arial/Arial-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/*Стили*/
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px 0 0 0; 
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--text-color, #ffffff);
+  background-color: var(--background-dark, #1b1a1b);
+}
+
+img, svg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+  content: "";
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width:1240px) {
+  .container {
+  padding: 0 60px;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .section__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width:880px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .section__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width:600px) {
+  body {
+    padding: 20px 0 0 0; 
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 15px 0;
+  }
+
+  .section__title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
