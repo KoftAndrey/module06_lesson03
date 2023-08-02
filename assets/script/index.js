@@ -5,4 +5,4 @@ import './modules/accordeon.js';
 import './modules/modal.js';
 
 // Выпадающее меню навигации
-// import './modules/dropMenu.js';
+import './modules/dropMenu.js';
