@@ -190,19 +190,20 @@
     border: 1px solid var(--dark-purple, #6c0287);
   }
 
-  .faq__item:hover .faq__circle_color_white {
+  .faq__head:hover .faq__circle_color_white {
     background-color: var(--dark-purple, #6c0287);
   }
 
-  .faq__item:hover .faq__circle_color_white .faq__plus_color_white {
+  .faq__head:hover .faq__circle_color_white .faq__plus_color_white {
     background-color: #fff;
   }
 
-  .faq__item:active .faq__circle_color_white {
+  .faq__head:active .faq__circle_color_white {
     background-color: #fff;
   }
   
-  .faq__item:active .faq__circle_color_white .faq__plus_color_white {
+  .faq__head:active .faq__circle_color_white .faq__plus_color_white,
+  .faq__head_active .faq__circle_color_white .faq__plus_color_white {
     background-color: var(--dark-purple, #6c0287);
   }
 }
