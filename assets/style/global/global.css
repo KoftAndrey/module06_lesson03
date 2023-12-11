@@ -39,7 +39,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  padding: 30px 0 0 0; 
+  padding: 30px 0 0 0;
   font-family: 'Arial';
   font-weight: 400;
   font-size: 16px;
@@ -48,7 +48,8 @@ body {
   background-color: var(--background-dark, #1b1a1b);
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -64,7 +65,8 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -101,7 +103,7 @@ summary:focus {
 details summary::-webkit-details-marker,
 details summary::marker {
   display: none;
-  content: "";
+  content: '';
 }
 
 .section {
@@ -116,9 +118,18 @@ details summary::marker {
   text-transform: uppercase;
 }
 
-@media (max-width:1240px) {
+/*disable default datepicker*/
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+  visibility: hidden !important;
+}
+
+@media (max-width: 1240px) {
   .container {
-  padding: 0 60px;
+    padding: 0 60px;
   }
 
   .section {
@@ -131,7 +142,7 @@ details summary::marker {
   }
 }
 
-@media (max-width:880px) {
+@media (max-width: 880px) {
   .container {
     padding: 0 40px;
   }
@@ -142,9 +153,9 @@ details summary::marker {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   body {
-    padding: 20px 0 0 0; 
+    padding: 20px 0 0 0;
   }
 
   .container {

@@ -275,19 +275,52 @@
   margin: 0 0 36px 0;
 }
 
-.book__input-date {
+.book__input-day {
   max-width: 134px;
+  max-height: 50px;
   flex: 0 1 calc((100% - 32px) / 2);
-  padding: 8px 17px;
   font-size: 18px;
   line-height: 28px;
   color: #211e1e;
+  background-color: transparent;
   border: 2px solid transparent;
   border-radius: 0px;
+  padding: 11px 50px 11px 20px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.book__input-date:not(:last-child) {
+.book__input-day::-webkit-input-placeholder {
+  color: #211e1e;
+}
+
+.book__day-wrapper {
+  flex: 0 1 calc((100% - 32px) / 2);
+  max-width: 134px;
   margin: 0 32px 0 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.book__day-wrapper::before {
+  content: '';
+  position: absolute;
+  right: 28px;
+  top: 16px;
+  width: 20px;
+  height: 15px;
+  background-image: url('../time-select/img/select-arrow.svg');
+  z-index: 10;
+}
+
+.book__input-time {
+  flex: 0 1 calc((100% - 32px) / 2);
+  max-width: 134px;
+  max-height: 50px;
+  border-radius: 0px;
+  margin: 0;
 }
 
 .book__input-counter {
@@ -301,11 +334,11 @@
   border-radius: 0px;
 }
 
-.book__input-date:focus, .book__input-counter:focus {
+.book__input-day:focus, .book__input-time:focus, .book__input-counter:focus {
   outline: none;
 }
 
-.book__input-date:focus, .book__input-counter:focus {
+.book__input-day:focus, .book__input-time:focus, .book__input-counter:focus {
   font-size: 18px;
   line-height: 28px;
   border: 2px solid var(--highlight-purple, #cd06ff);
@@ -448,13 +481,13 @@
     flex: 0 0 calc((100% - 150px) / 3 + 50px);
   }
 
-  .book__input-date {
+  .book__input-time, .book__day-wrapper {
     max-width: 50%;
     min-width: 118px;
   }
 
-  .book__input-date:not(:last-child) {
-    margin: 0;
+  .book__input-day {
+    max-width: 118px;
   }
 
   .book__input-counter {
@@ -473,8 +506,8 @@
 }
 
 @media (max-width:1015px) {
-  .book__input-date {
-    max-width: 134px;
+  .book__day-wrapper, .book__input-day, .book__input-time {
+    max-width: 118px;
   }
 }
 
@@ -568,7 +601,16 @@
     margin: 0 106px 0 0;
   }
 
-  .book__input-date {
+  .book__input-day {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .book__day-wrapper {
+    margin: 0;
+  }
+
+  .book__day-wrapper, .book__input-time {
     min-width: calc((100% - 14px) / 2);
   }
 
@@ -739,12 +781,11 @@
 
   .book__date-block {
     min-width: 100%;
-
     padding: 10px 0 0 0;
     margin: 0 0 15px 0;
   }
 
-  .book__input-date {
+  .book__day-wrapper, .book__input-time {
     flex: 0 0 calc((100% - 12px) / 2);
     max-width: calc((100% - 12px) / 2);
     min-height: 50px;
